@@ -1,0 +1,71 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head><link type="text/css" rel="stylesheet" href="/PTSC/COBRR32DPublico/javax.faces.resource/theme.css.xhtml?ln=primefaces-aristo" /><link type="text/css" rel="stylesheet" href="/PTSC/COBRR32DPublico/javax.faces.resource/primefaces.css.xhtml?ln=primefaces" /><script type="text/javascript" src="/PTSC/COBRR32DPublico/javax.faces.resource/jquery/jquery.js.xhtml?ln=primefaces"></script><script type="text/javascript" src="/PTSC/COBRR32DPublico/javax.faces.resource/primefaces.js.xhtml?ln=primefaces"></script><script type="text/javascript" src="/PTSC/COBRR32DPublico/javax.faces.resource/jquery/jquery-plugins.js.xhtml?ln=primefaces"></script>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>Consulta 32D - Público</title>
+		<link rel="stylesheet" href="https://framework-gb.cdn.gob.mx/assets/styles/main.css" type="text/css" />
+		
+		<script type="text/javascript">
+		function mostrarPanelDanger() {
+			//document.getElementById('panelMsg').style.display = "block";
+			$('#div-danger').removeClass("hidden");
+			$('#p-danger').html('');
+		}
+		function mostrarPanelSuccess() {
+			//document.getElementById('panelMsg').style.display = "block";
+			$('#div-success').removeClass("hidden");
+			$('#p-success').html('');
+		}
+		
+		</script></head><body>
+<form id="busquedaPorRfcForm" name="busquedaPorRfcForm" method="post" action="/PTSC/COBRR32DPublico/consultaPublico.xhtml" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="busquedaPorRfcForm" value="busquedaPorRfcForm" />
+
+			<div style="max-width:80%">
+				<H1>Consulta 32D Público</H1>
+			</div>
+			
+			<div>
+				<div id="div-danger" class="alert alert-danger alert-dismissible hidden" style="width: 66.66667%">
+					<strong><p id="p-danger"></p></strong>
+				</div>
+				<div id="div-success" class="alert alert-success alert-dismissible hidden" style="width: 66.66667%">
+					<strong><p id="p-success"></p></strong>
+				</div>
+			</div>
+			
+			<br />
+			
+			<div class="form-group" align="center">
+				<div style="max-width:400px" align="right"><table>
+<tbody>
+<tr>
+<td><label id="busquedaPorRfcForm:j_idt7" class="ui-outputlabel">RFC: </label></td>
+<td><img id="busquedaPorRfcForm:j_idt8" width="10" height="0" alt="" src="/PTSC/COBRR32DPublico/javax.faces.resource/spacer/dot_clear.gif.xhtml?ln=primefaces" /></td>
+<td><input id="busquedaPorRfcForm:txtRfc" name="busquedaPorRfcForm:txtRfc" type="text" autocomplete="off" maxlength="13" size="30" style="text-transform: uppercase" class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" /><script id="busquedaPorRfcForm:txtRfc_s" type="text/javascript">PrimeFaces.cw('InputText','widget_busquedaPorRfcForm_txtRfc',{id:'busquedaPorRfcForm:txtRfc',behaviors:{change:function(event) {PrimeFaces.ab({source:'busquedaPorRfcForm:txtRfc',event:'change',process:'busquedaPorRfcForm:txtRfc',update:'busquedaPorRfcForm:txtCurp busquedaPorRfcForm:btnBuscar'}, arguments[1]);}}});</script></td>
+<td>
+						<br />
+						<br />
+						<br /></td>
+</tr>
+<tr>
+<td><label id="busquedaPorRfcForm:j_idt10" class="ui-outputlabel">CURP: </label></td>
+<td><img id="busquedaPorRfcForm:j_idt11" width="10" height="0" alt="" src="/PTSC/COBRR32DPublico/javax.faces.resource/spacer/dot_clear.gif.xhtml?ln=primefaces" /></td>
+<td><input id="busquedaPorRfcForm:txtCurp" name="busquedaPorRfcForm:txtCurp" type="text" value="" autocomplete="off" maxlength="18" size="30" style="text-transform: uppercase" class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" /><script id="busquedaPorRfcForm:txtCurp_s" type="text/javascript">PrimeFaces.cw('InputText','widget_busquedaPorRfcForm_txtCurp',{id:'busquedaPorRfcForm:txtCurp',behaviors:{change:function(event) {PrimeFaces.ab({source:'busquedaPorRfcForm:txtCurp',event:'change',process:'busquedaPorRfcForm:txtCurp',update:'busquedaPorRfcForm:txtRfc busquedaPorRfcForm:btnBuscar'}, arguments[1]);}}});</script></td>
+</tr>
+</tbody>
+</table>
+
+						
+					<br /><div id="busquedaPorRfcForm:j_idt13" class="ui-dialog ui-widget ui-widget-content ui-overlay-hidden ui-corner-all ui-shadow"><div class="ui-dialog-titlebar ui-widget-header ui-helper-clearfix ui-corner-top"><span id="busquedaPorRfcForm:j_idt13_title" class="ui-dialog-title">Procesando</span></div><div class="ui-dialog-content ui-widget-content">
+						<img src="images/ajax-loader-1.gif" alt="Procesando" /></div></div><script id="busquedaPorRfcForm:j_idt13_s" type="text/javascript">$(function(){PrimeFaces.cw('Dialog','statusDialog',{id:'busquedaPorRfcForm:j_idt13',draggable:false,resizable:false,modal:true});});</script><img id="busquedaPorRfcForm:j_idt15" width="10" height="0" alt="" src="/PTSC/COBRR32DPublico/javax.faces.resource/spacer/dot_clear.gif.xhtml?ln=primefaces" /><button id="busquedaPorRfcForm:btnLimpiar" name="busquedaPorRfcForm:btnLimpiar" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only btn btn-default btn-sm" onclick="PrimeFaces.ab({source:'busquedaPorRfcForm:btnLimpiar',process:'busquedaPorRfcForm:btnLimpiar',update:'busquedaPorRfcForm'});return false;" type="submit"><span class="ui-button-text ui-c">Limpiar</span></button><script id="busquedaPorRfcForm:btnLimpiar_s" type="text/javascript">PrimeFaces.cw('CommandButton','widget_busquedaPorRfcForm_btnLimpiar',{id:'busquedaPorRfcForm:btnLimpiar'});</script><img id="busquedaPorRfcForm:j_idt16" width="10" height="0" alt="" src="/PTSC/COBRR32DPublico/javax.faces.resource/spacer/dot_clear.gif.xhtml?ln=primefaces" /><button id="busquedaPorRfcForm:btnBuscar" name="busquedaPorRfcForm:btnBuscar" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only ui-state-disabled btn btn-primary btn-sm" onclick="statusDialog.show();" type="submit" disabled="disabled"><span class="ui-button-text ui-c">Buscar</span></button><script id="busquedaPorRfcForm:btnBuscar_s" type="text/javascript">PrimeFaces.cw('CommandButton','widget_busquedaPorRfcForm_btnBuscar',{id:'busquedaPorRfcForm:btnBuscar'});</script> 
+				</div>
+			</div>
+			
+			<br />
+			<br />
+			
+			<div align="center" style="display:block">
+				<div style="max-width: 95%; max-height: 90%">
+				</div>
+			</div><input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="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" autocomplete="off" />
+</form></body>
+</html>
